@@ -1,0 +1,158 @@
+/* Root Variables */
+:root {
+  --text: #040316;
+  --background: #f3f7fc; /* Updated background for a softer appearance */
+  --primary: #4a90e2; /* Slightly brighter primary color */
+  --secondary: #e0f7ff;
+  --accent: #0056b3; /* Match hover color to a darker shade */
+}
+
+/* General Body Styling */
+body {
+  background-color: var(--background); /* Updated background */
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center the menu items */
+  background-color: var(--primary); /* Retain original styling */
+  padding: 15px; /* Increased padding for more spacing */
+  border-radius: 10px; /* Rounded edges for the menu bar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+nav ul li {
+  margin: 0 20px; /* Slightly increased spacing */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem; /* Slightly larger text for readability */
+  font-weight: bold;
+  padding: 12px 25px; /* Adjusted padding for better spacing */
+}
+
+nav ul li a:hover {
+  background-color: var(--accent); /* Updated hover color */
+  border-radius: 8px; /* More pronounced rounding */
+}
+
+/* Search Bar Styling */
+.search-container {
+  text-align: center; /* Center the search box */
+  margin-top: 30px; /* Add spacing below the menu */
+  margin-bottom: 30px; /* Space before other content */
+}
+
+.search-container input[type="text"] {
+  width: 300px; /* Slightly wider input box */
+  padding: 10px; /* Add comfortable padding */
+  border: 1px solid var(--primary); /* Use primary color for border */
+  border-radius: 8px; /* Rounded input */
+  font-size: 16px; /* Larger font size */
+}
+
+.search-container input[type="submit"] {
+  padding: 10px 20px; /* Larger button */
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px; /* Space between input and button */
+}
+
+.search-container input[type="submit"]:hover {
+  background-color: var(--accent);
+}
+
+/* Menu Section Styling */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Add space between items */
+  padding: 20px;
+  justify-items: center; /* Center each item */
+}
+
+/* Individual Menu Items */
+.menu-item {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* To ensure border-radius applies to the image */
+  text-align: center;
+  padding: 15px;
+}
+
+
+.menu-item img {
+  width: 100%; /* Make image fill container */
+  height: 200px; /* Uniform height for all images */
+  object-fit: cover; /* Ensure image maintains aspect ratio */
+  border-bottom: 2px solid var(--accent); /* Add a subtle separator */
+}
+
+.menu-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: var(--text);
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/* Hover Effect for Items */
+.menu-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+#contact-form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+

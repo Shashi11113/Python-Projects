@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Our History</h1>
+    <p>Waamo Restaurant was founded with the mission to bring the rich and flavorful traditions of Somali and Mediterranean cuisine to our community.
+        Named after the historic Waamo region, the restaurant embodies the warmth, hospitality, and diverse flavors of Somali culture.
+        Since opening our doors, Waamo has become a gathering place for families and friends, offering authentic dishes prepared with the finest ingredients and time-honored recipes.
+        From hearty entrees like Hilib and Chicken Sukhaar to savory appetizers like Sambusa and Hummus Dip, our menu reflects a commitment to culinary excellence and cultural pride.
+        Join us and experience a taste of Somalia, right in the heart of your neighborhood.</p>
+    <img src="{{ url_for('static', filename='images/waamo_history.jpg') }}" alt="History" width="100%">
+{% endblock %}

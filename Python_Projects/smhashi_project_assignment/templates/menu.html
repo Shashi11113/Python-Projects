@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Our Delicious Menu</h2>
+    <form method="GET" action="/menu">
+        <input type="text" name="search" placeholder="Search for an dishes..." value="{{ keyword or '' }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if item %}
+        <div class="menu-item">
+            <img src="{{ url_for('static', filename='images/' + item['image']) }}" alt="{{ item['name'] }}" style="width: 100%; max-width: 300px; height: auto; object-fit: cover; border-radius: 8px; display: block; margin: 0 auto;">
+            <h3>{{ item['name'] }}</h3>
+            <p>{{ item['description'] }}</p>
+            <p>${{ item['price'] }}</p>
+            <p>Quantity Available: {{ item['quantity'] }}</p>
+        </div>
+    {% elif products %}
+        <p>No dishes searched yet.</p>
+    {% else %}
+        <p>No dish found with that name.</p>
+    {% endif %}
+
+    <!-- Static menu items (non-searchable) -->
+    <div class="menu-container">
+        <div>
+            <h2>Hummus Dip</h2>
+            <img src="{{ url_for('static', filename='images/hummus.jpeg') }}" alt="Hummus" width="40%" height="30%">
+            <p>$8.98</p>
+        </div>
+        <div>
+            <h2>Hilib</h2>
+            <img src="{{ url_for('static', filename='images/hilib.jpeg') }}" alt="Oven-roasted goat meat" width="40%" height="30%">
+            <p>$20.04</p>
+        </div>
+        <div>
+            <h2>Beef Sukhaar</h2>
+            <img src="{{ url_for('static', filename='images/beef_sukhaar.jpg') }}" alt="Beef Sukhaar" width="40%" height="30%">
+            <p>$18.81</p>
+        </div>
+        <div>
+            <h2>Chicken Sukhaar</h2>
+            <img src="{{ url_for('static', filename='images/chicken_sukhaar.jpg') }}" alt="Chicken Sukhaar" width="40%" height="30%">
+            <p>$16.35</p>
+        </div>
+        <div>
+            <h2>Chicken Steak</h2>
+            <img src="{{ url_for('static', filename='images/chicken_steak.jpg') }}" alt="Chicken Steak" width="40%" height="30%">
+            <p>$17.58</p>
+        </div>
+        <div>
+            <h2>Chicken Leg</h2>
+            <img src="{{ url_for('static', filename='images/chicken_leg.jpeg') }}" alt="Chicken Leg" width="40%" height="10%">
+            <p>$15.12</p>
+        </div>
+        <div>
+            <h2>Beef Steak</h2>
+            <img src="{{ url_for('static', filename='images/beef_steak.jpeg') }}" alt="Beef Steak" width="40%" height="30%">
+            <p>$17.58</p>
+        </div>
+        <div>
+            <h2>Fish Fillet</h2>
+            <img src="{{ url_for('static', filename='images/fish_fillet.jpeg') }}" alt="Fish Fillet" width="40%" height="30%">
+            <p>$17.58</p>
+        </div>
+        <div>
+            <h2>Lamb Shank</h2>
+            <img src="{{ url_for('static', filename='images/lamb_shank.jpeg') }}" alt="Lamb Shank" width="40%" height="30%">
+            <p>$22.51</p>
+        </div>
+        <div>
+            <h2>Ethiopian Injera</h2>
+            <img src="{{ url_for('static', filename='images/ethiopian_injera.jpeg') }}" alt="Ethiopian Injera" width="40%" height="30%">
+            <p>$15.12</p>
+        </div>
+        <div>
+            <h2>Chapatti Wrap</h2>
+            <img src="{{ url_for('static', filename='images/chapatti_wrap.jpeg') }}" alt="Chapatti Wrap" width="40%" height="30%">
+            <p>$10.20</p>
+        </div>
+        <div>
+            <h2>Soor</h2>
+            <img src="{{ url_for('static', filename='images/soor.jpeg') }}" alt="Soor" width="40%" height="30%">
+            <p>$18.81</p>
+        </div>
+        <div>
+            <h2>Sports Platter (2 Items, 2 Sides)</h2>
+            <img src="{{ url_for('static', filename='images/sports_platter.jpeg') }}" alt="Sports Platter" width="40%" height="30%">
+            <p>$31.13</p>
+        </div>
+        <div>
+            <h2>Soda</h2>
+            <img src="{{ url_for('static', filename='images/soda.jpeg') }}" alt="Soda" width="40%" height="30%">
+            <p>$1.60</p>
+        </div>
+        <div>
+            <h2>Tea</h2>
+            <img src="{{ url_for('static', filename='images/tea.jpeg') }}" alt="Tea" width="40%" height="30%">
+            <p>$1.60</p>
+        </div>
+        <div>
+            <h2>Mango Juice</h2>
+            <img src="{{ url_for('static', filename='images/mango_juice.jpeg') }}" alt="Mango Juice" width="40%" height="30%">
+            <p>$1.60</p>
+        </div>
+        <div>
+            <h2>Watermelon Juice</h2>
+            <img src="{{ url_for('static', filename='images/watermelon_juice.jpeg') }}" alt="Watermelon Juice" width="40%" height="30%">
+            <p>$1.60</p>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
